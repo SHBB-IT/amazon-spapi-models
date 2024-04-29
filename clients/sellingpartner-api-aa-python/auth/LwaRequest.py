@@ -1,10 +1,12 @@
-import requests
-import time
 import logging
 import sys
+import time
+
+import requests
 
 #Update path
-sys.path.append("path_to_folder/SellingPartnerAPIAuthAndAuthPython")
+# sys.path.append("path_to_folder/SellingPartnerAPIAuthAndAuthPython")
+sys.path.append("clients/sellingpartner-api-aa-python")
 
 from auth.LwaException import LwaException
 from auth.LwaExceptionErrorCode import LwaExceptionErrorCode

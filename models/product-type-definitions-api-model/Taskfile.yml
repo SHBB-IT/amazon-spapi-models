@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  CURRENT_DIR: /models/product-type-definitions-api-model
+
+tasks:
+  definitionsProductTypes_2020-09-01:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - java -jar "{{.USER_WORKING_DIR}}{{.SWAGGER_JAR}}" generate -l python -t {{.USER_WORKING_DIR}}{{.PATH_TO_MUSTACHE}} -D packageName=swagger_client -o {{.USER_WORKING_DIR}}{{.OUTPUT_PATH}}definitionsProductTypes_2020-09-01 -i ./definitionsProductTypes_2020-09-01.json
+    silent: true

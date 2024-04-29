@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  CURRENT_DIR: /models/fba=small-and-light-api-model
+
+tasks:
+  fbaSmallandLight:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - echo "No API Model"
+    silent: true

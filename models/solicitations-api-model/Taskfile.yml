@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  CURRENT_DIR: /models/solicitations-api-model
+
+tasks:
+  solicitations:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - java -jar "{{.USER_WORKING_DIR}}{{.SWAGGER_JAR}}" generate -l python -t {{.USER_WORKING_DIR}}{{.PATH_TO_MUSTACHE}} -D packageName=swagger_client -o {{.USER_WORKING_DIR}}{{.OUTPUT_PATH}}solicitations -i ./solicitations.json
+    silent: true

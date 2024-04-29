@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  CURRENT_DIR: /models/shipment-invoicing-api-model
+
+tasks:
+  shipmentInvoicingV0:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - java -jar "{{.USER_WORKING_DIR}}{{.SWAGGER_JAR}}" generate -l python -t {{.USER_WORKING_DIR}}{{.PATH_TO_MUSTACHE}} -D packageName=swagger_client -o {{.USER_WORKING_DIR}}{{.OUTPUT_PATH}}shipmentInvoicingV0 -i ./shipmentInvoicingV0.json
+    silent: true

@@ -1,0 +1,19 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  CURRENT_DIR: /models/vendor-direct-fulfillment-orders-api-model
+
+tasks:
+  vendorDirectFulfillmentOrdersV1:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - java -jar "{{.USER_WORKING_DIR}}{{.SWAGGER_JAR}}" generate -l python -t {{.USER_WORKING_DIR}}{{.PATH_TO_MUSTACHE}} -D packageName=swagger_client -o {{.USER_WORKING_DIR}}{{.OUTPUT_PATH}}vendorDirectFulfillmentOrdersV1 -i ./vendorDirectFulfillmentOrdersV1.json
+    silent: true
+
+  vendorDirectFulfillmentOrders_2021-12-28:
+    dir: "{{.USER_WORKING_DIR}}{{.CURRENT_DIR}}"
+    cmds:
+      - java -jar "{{.USER_WORKING_DIR}}{{.SWAGGER_JAR}}" generate -l python -t {{.USER_WORKING_DIR}}{{.PATH_TO_MUSTACHE}} -D packageName=swagger_client -o {{.USER_WORKING_DIR}}{{.OUTPUT_PATH}}vendorDirectFulfillmentOrders_2021-12-28 -i ./vendorDirectFulfillmentOrders_2021-12-28.json
+    silent: true

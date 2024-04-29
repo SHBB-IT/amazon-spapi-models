@@ -1,0 +1,189 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+  SWAGGER_JAR: /../swagger-codegen-cli.jar
+  PATH_TO_MUSTACHE: /clients/sellingpartner-api-aa-python/resources
+  OUTPUT_PATH: /pyclient/
+  PACKAGE_NAME: sh_spapi
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.USER_WORKING_DIR}}"
+    silent: true
+
+includes:
+  aplusContent:
+    taskfile: ./models/aplus-content-api-model/Taskfile.yml
+    dir: ./models/aplus-content-api-model
+
+  application:
+    taskfile: ./models/application-management-api-model/Taskfile.yml
+    dir: ./models/application-management-api-model
+
+  authorization:
+    taskfile: ./models/authorization-api-model/Taskfile.yml
+    dir: ./models/authorization-api-model
+
+  catalogItems:
+    taskfile: ./models/catalog-items-api-model/Taskfile.yml
+    dir: ./models/catalog-items-api-model
+
+  dataKiosk:
+    taskfile: ./models/data-kiosk-api-model/Taskfile.yml
+    dir: ./models/data-kiosk-api-model
+
+  easyShip:
+    taskfile: ./models/easy-ship-model/Taskfile.yml
+    dir: ./models/easy-ship-model
+
+  fbaInbound:
+    taskfile: ./models/fba-inbound-eligibility-api-model/Taskfile.yml
+    dir: ./models/fba-inbound-eligibility-api-model
+
+  fbaInventory:
+    taskfile: ./models/fba-inventory-api-model/Taskfile.yml
+    dir: ./models/fba-inventory-api-model
+
+  fbaSmallandLight:
+    taskfile: ./models/fba-small-and-light-api-model/Taskfile.yml
+    dir: ./models/fba-fba-small-and-light-api-model
+
+  feeds:
+    taskfile: ./models/feeds-api-model/Taskfile.yml
+    dir: ./models/feeds-api-model
+
+  finance:
+    taskfile: ./models/finances-api-model/Taskfile.yml
+    dir: ./models/finances-api-model
+
+  fulfillmentInbound:
+    taskfile: ./models/fulfillment-inbound-api-model/Taskfile.yml
+    dir: ./models/fulfillment-inbound-api-model
+
+  fulfillmentOutbound:
+    taskfile: ./models/fulfillment-outbound-api-model/Taskfile.yml
+    dir: ./models/fulfillment-outbound-api-model
+
+  listingsItems:
+    taskfile: ./models/listings-items-api-model/Taskfile.yml
+    dir: ./models/listings-items-api-model
+
+  listingsRestrictions:
+    taskfile: ./models/listings-restrictions-api-model/Taskfile.yml
+    dir: ./models/listings-restrictions-api-model
+
+  merchantFulfillment:
+    taskfile: ./models/merchant-fulfillment-api-model/Taskfile.yml
+    dir: ./models/merchant-fulfillment-api-model
+
+  messaging:
+    taskfile: ./models/messaging-api-model/Taskfile.yml
+    dir: ./models/messaging-api-model
+
+  notifications:
+    taskfile: ./models/notifications-api-model/Taskfile.yml
+    dir: ./models/notifications-api-model
+
+  orders:
+    taskfile: ./models/orders-api-model/Taskfile.yml
+    dir: ./models/orders-api-model
+
+  productFees:
+    taskfile: ./models/product-fees-api-model/Taskfile.yml
+    dir: ./models/product-fees-api-model
+
+  productPricing:
+    taskfile: ./models/product-pricing-api-model/Taskfile.yml
+    dir: ./models/product-pricing-api-model
+
+  productTypes:
+    taskfile: ./models/product-type-definitions-api-model/Taskfile.yml
+    dir: ./models/product-type-definitions-api-model
+
+  replenishment:
+    taskfile: ./models/replenishment-api-model/Taskfile.yml
+    dir: ./models/replenishment-api-model
+
+  reports:
+    taskfile: ./models/reports-api-model/Taskfile.yml
+    dir: ./models/reports-api-model
+
+  sales:
+    taskfile: ./models/sales-api-model/Taskfile.yml
+    dir: ./models/sales-api-model
+
+  sellers:
+    taskfile: ./models/sellers-api-model/Taskfile.yml
+    dir: ./models/sellers-api-model
+
+  services:
+    taskfile: ./models/services-api-model/Taskfile.yml
+    dir: ./models/services-api-model
+
+  shipmentInvoicing:
+    taskfile: ./models/shipment-invoicing-api-model/Taskfile.yml
+    dir: ./models/shipment-invoicing-api-model
+
+  shipping:
+    taskfile: ./models/shipping-api-model/Taskfile.yml
+    dir: ./models/shipping-api-model
+
+  solicitations:
+    taskfile: ./models/solicitations-api-model/Taskfile.yml
+    dir: ./models/solicitations-api-model
+
+  supplySources:
+    taskfile: ./models/supply-sources-api-model/Taskfile.yml
+    dir: ./models/supply-sources-api-model
+
+  tokens:
+    taskfile: ./models/tokens-api-model/Taskfile.yml
+    dir: ./models/tokens-api-model
+
+  uploads:
+    taskfile: ./models/uploads-api-model/Taskfile.yml
+    dir: ./models/uploads-api-model
+
+  vendorDirectFulfillmentInventory:
+    taskfile: ./models/vendor-direct-fulfillment-inventory-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-inventory-api-model
+
+  vendorDirectFulfillmentOrders:
+    taskfile: ./models/vendor-direct-fulfillment-orders-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-orders-api-model
+
+  vendorDirectFulfillmentPayments:
+    taskfile: ./models/vendor-direct-fulfillment-payments-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-payments-api-model
+
+  vendorDirectFulfillmentSandbox:
+    taskfile: ./models/vendor-direct-fulfillment-sandbox-test-data-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-sandbox-test-api-model
+
+  vendorDirectFulfillmentShipping:
+    taskfile: ./models/vendor-direct-fulfillment-shipping-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-shipping-api-model
+
+  vendorDirectFulfillmentTransactions:
+    taskfile: ./models/vendor-direct-fulfillment-transactions-api-model/Taskfile.yml
+    dir: ./models/vendor-direct-fulfillment-transactions-api-model
+
+  vendorInvoices:
+    taskfile: ./models/vendor-invoices-api-model/Taskfile.yml
+    dir: ./models/vendor-invoices-api-model
+
+  vendorOrders:
+    taskfile: ./models/vendor-orders-api-model/Taskfile.yml
+    dir: ./models/vendor-orders-api-model
+
+  vendorShipments:
+    taskfile: ./models/vendor-shipments-api-model/Taskfile.yml
+    dir: ./models/vendor-shipments-api-model
+
+  vendorTransactionStatus:
+    taskfile: ./models/vendor-transaction-status-api-model/Taskfile.yml
+    dir: ./models/vendor-transaction-status-api-model
